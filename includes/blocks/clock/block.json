@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "world-clocks/clock",
+	"title": "Single clock",
+	"category": "widgets",
+	"icon": "clock",
+	"description": "Display single clock inside World Clocks block",
+	"parent": [ "world-clocks/clocks" ],
+	"attributes": {
+		"timezone": {
+			"type": "string",
+			"default": "UTC"
+		},
+		"clockLabel": {
+			"type": "string",
+			"default": "UTC"
+		}
+	},
+	"supports": {
+		"html": false,
+		"color": {
+			"text": true,
+			"background": true
+		}
+	},
+	"usesContext": [
+		"world-clocks/showClocksAmPmIndicator",
+		"world-clocks/showDigitalTime",
+		"world-clocks/timeFormat",
+		"world-clocks/showDate",
+		"world-clocks/dateFormat",
+		"world-clocks/layout",
+		"world-clocks/marksFormat"
+	],
+	"textdomain": "world-clocks",
+	"editorScript": "file:../../../dist/clock-block.js",
+	"editorStyle": "file:../../../dist/clock-block.css",
+	"style": "file:../../../dist/style-clock-block.css"
+}

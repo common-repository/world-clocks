@@ -1,0 +1,35 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "\/wp-admin\/post.php?post=10&action=edit",
+	"preferredVersions": {
+		"php": "8.0",
+		"wp": "latest"
+	},
+	"phpExtensionBundles": [
+		"kitchen-sink"
+	],
+	"steps": [
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org\/plugins",
+				"slug": "world-clocks"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/sanketio/world-clocks/trunk/.wordpress-org/blueprints/demo-data.xml"
+			}
+		}
+	]
+}

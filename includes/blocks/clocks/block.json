@@ -1,0 +1,67 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "world-clocks/clocks",
+	"title": "World Clocks",
+	"category": "widgets",
+	"description": "Display world clocks",
+	"allowedBlocks": [ "world-clocks/clock" ],
+	"attributes": {
+		"clocksPerRow": {
+			"type": "number",
+			"default": 2
+		},
+		"clocksStackOnMobile": {
+			"type": "boolean",
+			"default": true
+		},
+		"showClocksAmPmIndicator": {
+			"type": "boolean",
+			"default": true
+		},
+		"showDigitalTime": {
+			"type": "boolean",
+			"default": false
+		},
+		"timeFormat": {
+			"type": "string",
+			"default": "h:i:s A"
+		},
+		"showDate": {
+			"type": "boolean",
+			"default": false
+		},
+		"dateFormat": {
+			"type": "string",
+			"default": "Y-m-d"
+		},
+		"layout": {
+			"type": "string",
+			"default": "digital-row"
+		},
+		"marksFormat": {
+			"type": "string",
+			"default": "number"
+		}
+	},
+	"providesContext": {
+		"world-clocks/showClocksAmPmIndicator": "showClocksAmPmIndicator",
+		"world-clocks/showDigitalTime": "showDigitalTime",
+		"world-clocks/timeFormat": "timeFormat",
+		"world-clocks/showDate": "showDate",
+		"world-clocks/dateFormat": "dateFormat",
+		"world-clocks/layout": "layout",
+		"world-clocks/marksFormat": "marksFormat"
+	},
+	"supports": {
+		"html": false,
+		"color": {
+			"text": true,
+			"background": true
+		}
+	},
+	"textdomain": "world-clocks",
+	"editorScript": "file:../../../dist/clocks-block.js",
+	"editorStyle": "file:../../../dist/clocks-block.css",
+	"style": "file:../../../dist/style-clocks-block.css"
+}
